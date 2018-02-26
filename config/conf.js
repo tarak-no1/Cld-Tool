@@ -1,4 +1,4 @@
 module.exports = {
 	api_link : 'http://api.wordnik.com:80/v4/',
-    token : '8100b8e1e037dcef2c6d2bf5c738f14f2ecfb767c262bae'
+    api_key : 'daa9a9edccb1446635735317204b5b503384b727db9d292'
 }

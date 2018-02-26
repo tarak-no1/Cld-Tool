@@ -1,8 +1,8 @@
 'use strict';
 const request = require('request-json');
-const config = require('../config/config');
-const client = request.createClient(config.api_link);
-const token = config.token;
+const conf = require('../config/conf');
+const client = request.createClient(conf.use);
+const token = conf.token;
 
 module.exports = (function(){
     const getData = function(path,callback){
@@ -11,17 +11,13 @@ module.exports = (function(){
           if(res.statusCode === 200){
               return callback(null,body);
           }
-          return callback(`|| Response StatusCode: ${res.statusCode}`,null);
+          return callback(`Response StatusCode: ${res.statusCode}`,null);
       });
     };
     //public methods
-    const that = {
+    const needed_functions = {
       getDefinition : function(word,callback){
         let path = `word.json/${word}/definitions?limit=200&includeRelated=true&sourceDictionaries=all&useCanonical=false&includeTags=false&api_key=${token}`;
-        getData(path,callback);
-      },
-      getSynonym : function(word,callback){
-        let path = `word.json/${word}/relatedWords?useCanonical=false&relationshipTypes=synonym&limitPerRelationshipType=10&api_key=${token}`;
         getData(path,callback);
       },
       getSynonym : function(word,callback){
@@ -45,5 +41,5 @@ module.exports = (function(){
         getData(path,callback);
       }
     };
-    return that;
+    return needed_functions;
 })();
