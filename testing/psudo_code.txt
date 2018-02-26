@@ -1,0 +1,16 @@
+
+take input from user
+
+check the game status
+if game status is false // means taking command from user
+	check user entered command is valid or not
+	if command is valid:
+		check the command type
+		if command is def:
+			take the word and pass it into definition api and get the definition and display in console
+		if command is syn:
+			
+	if command not valid
+		display error command message
+
+if game status is true
