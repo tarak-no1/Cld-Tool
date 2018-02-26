@@ -8,9 +8,41 @@ if game status is false // means taking command from user
 		check the command type
 		if command is def:
 			take the word and pass it into definition api and get the definition and display in console
-		if command is syn:
-			
+		else if command is syn:
+			take the word and pass it into synonyms api and get the synonyms and display in console
+		else if command is ant:
+			take the word and pass it into antonym api and get the antonyms and display in console
+		else if command is ex:
+			take the word and pass it into example api and get the example and display in console
+		else if command is dict:
+			take the word and get all above defined functions and display in console
+		else if command is play:
+			make game status true and display the instructions and get a random word from random api and display its synonyms, antonyms and definition and ask for guess the word. 
+		else
+			check command is existed or not
+			if command exists
+				take the command as word and get all above defined functions and display in console
+			else
+				get the word from word of the day api and get all above defined functions and display in console
 	if command not valid
 		display error command message
 
 if game status is true
+	if user_ans_status is true
+		check the word is currect or not
+		if word == required_answer
+			display "currect"
+		else
+			user_ans_status is false
+			display below options
+				1. try again
+				2. hint
+				3. quit
+	if user_ans_status is false
+		check user selected valid options or not
+		if selected value is 1(try again)
+			make user_ans_status is true
+		else if selected value is 2(hint)
+			display the hint
+		else if selected value is 3(quit)
+			get all above defined functions of guessing word and display in console

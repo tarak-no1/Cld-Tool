@@ -12,5 +12,9 @@
   },
   "author": "tarak",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/tarak-kingdom/cld-tool#readme"
+  "homepage": "https://bitbucket.org/tarak-kingdom/cld-tool#readme",
+  "dependencies": {
+    "dateformat": "^3.0.3",
+    "request-json": "^0.6.3"
+  }
 }

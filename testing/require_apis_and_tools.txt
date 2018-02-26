@@ -1,18 +1,130 @@
 Example api : 
 http://api.wordnik.com:80/v4/word.json/{word}/examples?includeDuplicates=false&useCanonical=false&skip=0&limit=5&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5
-
+response format : word=hi
+{
+	"examples":
+	[
+	    {
+	      "provider": {
+	        "name": "wordnik",
+	        "id": 711
+	      },
+	      "rating": 9079.42,
+	      "url": "http://api.wordnik.com/v4/mid/c7770244b5030b08c7ad8bc5c8a7b24057ee758b5d623a51fd649fa21c7ed483",
+	      "word": "hi",
+	      "text": "And be þet hi offrede Mirre. þet is biter þing. signefieth þet hi  {40} hedde be {} liaue þet he was diadlich. þet diath solde suffri for man ken.",
+	      "title": "Selections from early Middle English, 1130-1250 Part I: Texts",
+	      "documentId": 18081427,
+	      "exampleId": 1090108532
+	    },
+	    {
+	      "provider": {
+	        "name": "spinner",
+	        "id": 712
+	      },
+	      "year": 2008,
+	      "rating": 5185,
+	      "url": "http://api.wordnik.com/v4/mid/d18b03049a4465b12d5189f6dcb37e6c9d00e4143926a1dbf3d196a4ecb170bd",
+	      "word": "hi",
+	      "text": "+ only works on the next key pressed (Excluding other modifiers, like Ctrl, Alt, Shift, or WinKey). +hi would make \"Hi\", while {ShiftDown} hi {ShiftUp} would make \"HI\".",
+	      "title": "AutoHotkey Community",
+	      "documentId": 12557928,
+	      "exampleId": 151197306
+	    }
+ 	]
+}
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 Definitions Api: 
 http://api.wordnik.com:80/v4/word.json/{word}/definitions?limit=200&includeRelated=true&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5
-
-
+response format : word = hi
+[
+	{
+		textProns: [],
+	    sourceDictionary: 'ahd-legacy',
+	    exampleUses: [],
+	    relatedWords: [],
+	    labels: [],
+	    citations: [],
+	    word: 'hi',
+	    partOfSpeech: 'interjection',
+	    attributionText: 'from The American Heritage® Dictionary of the English Language, 4th Edition',
+	    sequence: '0',
+	    text: 'Informal Used to express greeting. See Regional Note at hey.',
+	    score: 0
+	},
+	{
+		textProns: [],
+	    sourceDictionary: 'wiktionary',
+	    exampleUses: [],
+	    relatedWords: [],
+	    labels: [],
+	    citations: [],
+	    word: 'hi',
+	    partOfSpeech: 'interjection',
+	    attributionText: 'from Wiktionary, Creative Commons Attribution/Share-Alike License',
+	    attributionUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+	    text: 'A friendly, informal, casual greeting said when meeting someone.',
+	    score: 0
+	}
+]
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 Synonyms api : 
 http://api.wordnik.com:80/v4/word.json/{word}/relatedWords?useCanonical=false&relationshipTypes=synonym&limitPerRelationshipType=10&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5
-
+response format : word=bye
+[
+	{
+		relationshipType: 'synonym',
+    	words: [ 'indirectly', 'dwelling', 'run', 'goal', 'hole', 'beside' ]
+	}
+]
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 Antonym api : 
 http://api.wordnik.com:80/v4/word.json/{word}/relatedWords?useCanonical=false&relationshipTypes=antonym&limitPerRelationshipType=10&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5
-
+[
+	{
+		relationshipType: 'antonym',
+    	words: [ 'indirectly', 'dwelling', 'run', 'goal', 'hole', 'beside' ]
+	}
+]
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 Wordoftheday api : 
 http://api.wordnik.com:80/v4/words.json/wordOfTheDay?date=2018-02-26&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5
-
+response format : date = 2018-02-27
+{ id: 521508,
+  word: 'mesic',
+  publishDate: '2018-02-27T03:00:00.000+0000',
+  contentProvider: { name: 'wordnik', id: 711 },
+  note: 'The word \'mesic\' comes from a Greek root meaning \'middle\'.\'',
+  examples:
+   [ { url: 'http://api.wordnik.com/v4/mid/e34efd8db15487078b52db3e51962174c31076645711067c60bf0e831351a65c',
+       text: 'One even finds small remnants of boreal pine forests, old growth forest, and mesic forest tucked away in Durango\'s high sierra region.',
+       title: 'Wildflower hunting in Durango',
+       id: 811429426 },
+     { url: 'http://api.wordnik.com/v4/mid/e34efd8db15487078b52db3e51962174967ad35afaa66b55f33d7ea31c244a11',
+       text: 'Mexican mesic forest survives as one of the world\'s rarest and most endangered vegetation types.',
+       title: 'Wildflower hunting in Durango',
+       id: 811429427 },
+     { url: 'http://api.wordnik.com/v4/mid/8d3e8dc4c44b3acf4671b17c2f2bb4d344eeecaf5600a2a15ab58f0f49206cfb',
+       text: 'The soil temperature regimes are mesic and thermic inland, mesic on the rolling hills between the Santa Rosa plain and the Pacific Ocean, and isomesic along the coast.',
+       title: 'Coastal Hills - Santa Rosa Plain',
+       id: 657149859 },
+     { url: 'http://api.wordnik.com/v4/mid/3145c271a2650aa8f633a9a3cfa8c687cf6582e8ed9f2b885b1746cfc11f276b',
+       text: 'Put mesic (adapted to environments with a moderate amount of moisture) and xeric (dry or desert) flies in evironments with different zones of humidity, one surprising result is that the xeric flies move most quickly and determinedly to moist areas, more so than mesic flies.',
+       title: 'Pharyngula',
+       id: 391883001 } ],
+  definitions:
+   [ { text: 'Moist.',
+       partOfSpeech: 'adjective',
+       source: 'wiktionary' },
+     { text: 'Adapted to a moist habitat.',
+       partOfSpeech: 'adjective',
+       source: 'wiktionary' } ] }
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 Random word api : 
 http://api.wordnik.com:80/v4/words.json/randomWord?hasDictionaryDef=false&minCorpusCount=0&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5
+response format : 
+{
+	id: 280972,
+	word: 'grisliest'
+}
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
