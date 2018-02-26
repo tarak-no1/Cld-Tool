@@ -1,0 +1,16 @@
+{
+  "name": "cld-tool",
+  "version": "1.0.0",
+  "description": "Command Line Dictionary Tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://tarak-kingdom@bitbucket.org/tarak-kingdom/cld-tool.git"
+  },
+  "author": "tarak",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/tarak-kingdom/cld-tool#readme"
+}
