@@ -70,6 +70,42 @@ const game =
 				callback({});
 			}
 		});
+	},
+	displayHint : function(word_details)
+	{
+		let hint_items = []
+		hint_items = hint_items.concat(word_details.definitions.map(function(def_obj, idx){
+			def_obj.type = 'definition';
+			def_obj.index = idx;
+			return def_obj;
+		}));
+
+		hint_items = hint_items.concat(word_details.synonyms.map(function(synonym, idx){
+			let syn_obj = {};
+			syn_obj.type = 'synonym';
+			syn_obj.index = idx;
+			syn_obj.value = synonym;
+			return syn_obj;
+		}));
+
+		hint_items = hint_items.concat(word_details.antonyms.map(function(antonym, idx){
+			let syn_obj = {};
+			syn_obj.type = 'antonym';
+			syn_obj.index = idx;
+			syn_obj.value = antonym;
+			return syn_obj;
+		}));
+
+		if(hint_items.length>0)
+		{
+			let random_idx = Math.floor(Math.random() * Math.floor(hint_items.length));
+			let hint_obj = hint_items[random_idx];
+			console.log(JSON.stringify(hint_obj, null, 2));
+		}
+		else
+		{
+			console.log(`Sorry, There was no hints available.`);
+		}
 	}
 };
 module.exports = game;
