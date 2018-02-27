@@ -41,18 +41,15 @@ The output should be nicely formatted on console, and show all relevant informat
 	If correct word is entered, program should tell that the word is correct
 	* Other(not displayed) Synonyms of the word should be accepted as correct answer.
 	If incorrect word is entered, program should ask for
-		- 1. **try again**
-			Lets user enter word again
+		- 1. **try again** Lets user enter word again
 
-		- 2. **hint**
-			Display a hint, and let user enter word again
+		- 2. **hint** Display a hint, and let user enter word again
 			Hint can be
-Display the word randomly jumbled (cat -> atc)
-OR Display another definition of the word
-OR Display another antonym of the word
-OR Display another synonym of the word
-		-3 **quit**
-			Display the word, its full dict, and quit
+			Display the word randomly jumbled (cat -> atc)
+			OR Display another definition of the word
+			OR Display another antonym of the word
+			OR Display another synonym of the word
+			
+		- 3 **quit** Display the word, its full dict, and quit
 
 ---
-
