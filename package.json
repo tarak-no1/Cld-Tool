@@ -4,7 +4,8 @@
   "description": "Command Line Dictionary Tool",
   "main": "index.js",
   "scripts": {
-    "test": "node index"
+    "test": "node index",
+    "start": "node index"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,16 @@
   "dependencies": {
     "dateformat": "^3.0.3",
     "request-json": "^0.6.3"
-  }
+  },
+  "devDependencies": {},
+  "keywords": [
+    "wordnik",
+    "nodejs",
+    "command",
+    "line",
+    "dictionary",
+    "tool",
+    "dictionary",
+    "tarak"
+  ]
 }

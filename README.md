@@ -55,3 +55,9 @@ The output should be nicely formatted on console, and show all relevant informat
 		- 3 **quit** Display the word, its full dict, and quit
 
 ---
+
+*for installing node_modules type :*
+	- npm install
+
+*for starting the program type :*
+	- npm test or npm start

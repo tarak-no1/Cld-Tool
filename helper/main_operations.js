@@ -75,6 +75,7 @@ const main = {
 			{
 				console.log(`Examples for ${word}`);
 				console.log("===================================");
+				response.examples = response.examples.splice(0, 10); // taking only 10 examples
 				response.examples.forEach(function(ex_obj, idx){
 					console.log(`eg-${idx+1}) ${ex_obj.text}`)
 				});

@@ -6,7 +6,9 @@ module.exports = (input, game_details)=>{
 	{
 		if(user_ans===game_details.word_details.word || game_details.word_details.synonyms.indexOf(user_ans)!=-1) // right answer condition
 		{
-			console.log("correct");
+			console.log("correct\n");
+			game_details.status = false;
+			console.log("If you want to play again type \n./dict play")
 		}
 		else
 		{
@@ -29,6 +31,8 @@ module.exports = (input, game_details)=>{
 				break;
 			case '2':
 				game_operations.displayHint(game_details); // processing the word details to display hint
+				game_details.user_ans_status = true;
+				console.log("Enter your Answer : ");
 				break;
 			case '3':
 				game_details.status = false;
