@@ -30,10 +30,10 @@ function getUserInput(user_input)
 {
 	let data = user_input.split(' '); // splitting the user input
 	//console.log(data);
-	console.log("Game Status : ",game_details.status)
+	//console.log("Game Status : ",game_details.status)
 	if(!game_details.status) // checking for game status
 	{
-		main(data, game_details);
+		main(data, game_details); // processing the user command
 	}
 	else
 	{
